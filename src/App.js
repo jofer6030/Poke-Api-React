@@ -57,7 +57,11 @@ function App() {
         limit: interval.limit + 100,
       });
     } else {
-      getPokemons();
+      setInterval({
+        ...interval,
+        offset: 0,
+        limit: 100,
+      });
     }
   };
 
